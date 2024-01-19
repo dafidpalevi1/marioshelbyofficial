@@ -2232,38 +2232,50 @@ aside,
 /*----------------------------------------*/
 /*  HOME PAGE 01
 /*----------------------------------------*/
-.brand-area {
-  padding-top: 100px;
-}
-
-.brand-area .small-section h3 {
-  font-size: 30px;
-  line-height: 42px;
-  font-family: "Gilroy-Bold";
-  margin-bottom: 35px;
-}
-
-.brand-area .brand-slider-active .slick-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* Gaya tambahan untuk responsif */
+.brand-slider-active {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.brand-area .brand-slider-active .single-brand img {
+.single-brand {
+  flex: 0 0 25%; /* Mengatur lebar masing-masing brand pada layar besar */
+  max-width: 25%; /* Hindari terlalu besar pada layar besar */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Responsif untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+  .single-brand {
+      flex: 0 0 50%; /* Mengatur lebar masing-masing brand pada layar sedang dan kecil */
+      max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .single-brand {
+      flex: 0 0 100%; /* Satu kolom penuh pada layar sangat kecil */
+      max-width: 100%;
+  }
+}
+
+/* Gaya tambahan untuk hover */
+.single-brand img {
   margin: auto;
   text-align: center;
-  width: 160px;
+  width: 100%;
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: filter 0.3s ease; /* Efek transisi pada hover */
 }
 
-.brand-area .brand-slider-active .single-brand img:hover {
+.single-brand:hover img {
   -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  filter: grayscale(0%);
 }
+
 
 /*----------------------------------------*/
 /*  HOME PAGE 02
