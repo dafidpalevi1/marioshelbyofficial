@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            display: inline-block;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        section {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-image {
+            max-width: 33px;
+            height: auto;
+        }
+
+        .product-info {
+            margin-top: 15px;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1em;
+        }
+
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            font-size: 1em;
+        }
+
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .product-card {
+                width: 100%;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .menu-icon:before {
+                content: '\2630';
+                font-size: 24px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            nav.active {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TikTok Shop</h1>
+</header>
+
+<nav>
+    <div class="menu-icon" onclick="toggleMenu()"></div>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section>
+    <div class="product-card">
+        <img class="product-image" src="assets/img/kaos/kaos (1).png" alt="Product 1">
+        <h2>Kaos Agency Merah Putih</h2>
+        <div class="product-info">
+            <p>Description of Product 1.</p>
+            <p class="product-price">Rp.95.000</p>
+        </div>
+        <button class="buy-button">Beli Sekarang</button>
+    </div>
+
+    <div class="product-card">
+        <img class="product-image" src="assets/img/kaos/kaos (2).png" alt="Product 2">
+        <h2>Kaos Tiktok Live Streaming</h2>
+        <div class="product-info">
+            <p>Description of Product 2.</p>
+            <p class="product-price">Rp.105.000</p>
+        </div>
+        <button class="buy-button">Beli Sekarang</button>
+    </div>
+
+    <div class="product-card">
+        <img class="product-image" src="assets/img/kaos/kaos (2).png" alt="Product 3">
+        <h2>Kaos Agency Merah Putih Lengan Panjang</h2>
+        <div class="product-info">
+            <p>Description of Product 3.</p>
+            <p class="product-price">Rp.120.000</p>
+        </div>
+        <button class="buy-button">Beli Sekarang</button>
+    </div>
+</section>
+
+<footer>
+    &copy; 2024 TikTok Shop
+</footer>
+
+<script>
+    function toggleMenu() {
+        var nav = document.querySelector('nav');
+        nav.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
