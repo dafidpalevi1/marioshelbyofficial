@@ -7623,6 +7623,7 @@ aside,
   line-height: 35px;
   margin-top: 10px;
   margin-bottom: 15px;
+  color: rgb(255, 255, 255);
 }
 
 .footer-area-about p {
@@ -7656,6 +7657,7 @@ aside,
 
 .footer-area-lists h4 {
   margin-bottom: 5px;
+  color: rgb(255, 255, 255);
 }
 
 .footer-area-lists ul li a {
