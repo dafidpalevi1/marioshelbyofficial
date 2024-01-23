@@ -848,7 +848,7 @@ p {
   left: 0;
   -webkit-box-shadow: 0 1px 10px 0px #dadada;
           box-shadow: 0 1px 10px 0px #dadada;
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   z-index: 9999;
   padding: 15px 0px;
 }
@@ -1171,11 +1171,12 @@ aside,
 /*  HOME PAGE 01
 /*----------------------------------------*/
 .bannerArea {
+  font-size: large;
   position: relative;
   margin: 0 45px;
   padding: 75px 40px 110px 40px;
   border-radius: 24px;
-  background-color: #FE2C55;
+  background-color: #ffffff;
 }
 
 .bannerArea__wrapper {
@@ -11373,7 +11374,7 @@ aside,
   .blog-area,
   .map-area,
   .conatact-area {
-    padding: 90px 0px;
+    padding: 0px 0px;
   }
   /* Section padding */
   /*Section Title */
