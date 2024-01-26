@@ -11681,3 +11681,40 @@ aside,
     transform: rotate(0deg);
  }
 }
+
+/* CSS untuk Tabel */
+.ace-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+/* CSS untuk Kolom */
+.ace-table th, .ace-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* CSS untuk Baris Ganjil */
+.ace-table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* CSS untuk Baris Hover */
+.ace-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* CSS untuk Scroll di Perangkat Seluler */
+.tb-scrollable-children {
+  overflow-x: auto;
+}
+
+/* CSS untuk Responsif di Perangkat Seluler */
+@media (max-width: 600px) {
+  .ace-table th, .ace-table td {
+    font-size: 14px; /* Sesuaikan dengan kebutuhan Anda */
+  }
+}
+
