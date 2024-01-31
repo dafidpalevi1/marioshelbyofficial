@@ -11683,6 +11683,28 @@ aside,
 }
 
 /* CSS untuk Tabel */
+/* CSS untuk tampilan desktop */
+@media only screen and (min-width: 768px) {
+  .ace-table {
+    max-width: 100%;
+  }
+}
+
+/* CSS untuk tampilan mobile */
+@media only screen and (max-width: 767px) {
+  .ace-table {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* CSS untuk mengubah ukuran gambar */
+.ace-table img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .ace-table {
   width: 100%;
   border-collapse: collapse;
