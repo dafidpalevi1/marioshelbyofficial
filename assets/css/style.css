@@ -11699,6 +11699,30 @@ aside,
 }
 
 /* CSS untuk mengubah ukuran gambar */
+.jadwal {
+  overflow-x: auto;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.jadwal table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.jadwal th, .jadwal td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.jadwal th {
+  background-color: #f2f2f2;
+}
+
+
 .ace-table img {
   max-width: 100%;
   height: auto;
