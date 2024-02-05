@@ -11619,6 +11619,47 @@ aside,
 /*# sourceMappingURL=style.css.map */
 
 .templatecookie-btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.purchase-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.purchase-btn:hover {
+  background-color: #45a049;
+}
+
+.purchase-btn span {
+  margin-left: 10px;
+}
+
+.purchase-btn svg {
+  vertical-align: middle;
+}
+
+/* Media query untuk perangkat seluler */
+@media screen and (max-width: 600px) {
+  .purchase-btn {
+      padding: 8px 16px;
+  }
+}
+
+/* Media query untuk desktop */
+@media screen and (min-width: 601px) {
+  .purchase-btn {
+      padding: 10px 20px;
+  }
+}
+
+
+.templatecookie-btn {
   position: fixed !important;
   bottom: 20px !important;
   right: 20px !important;
