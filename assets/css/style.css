@@ -11619,59 +11619,18 @@ aside,
 /*# sourceMappingURL=style.css.map */
 
 .templatecookie-btn {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.purchase-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.purchase-btn:hover {
-  background-color: #45a049;
-}
-
-.purchase-btn span {
-  margin-left: 10px;
-}
-
-.purchase-btn svg {
-  vertical-align: middle;
-}
-
-/* Media query untuk perangkat seluler */
-@media screen and (max-width: 600px) {
-  .purchase-btn {
-      padding: 8px 16px;
-  }
-}
-
-/* Media query untuk desktop */
-@media screen and (min-width: 601px) {
-  .purchase-btn {
-      padding: 10px 20px;
-  }
-}
-
-
-.templatecookie-btn {
   position: fixed !important;
   bottom: 20px !important;
   right: 20px !important;
   z-index: 10000000000000000 !important;
 }
+
 .templatecookie-btn .purchase-btn {
   box-shadow: 0px 0px 3px 0px white !important;
-  background-color: #02421b; !important;
+  background-color: #02421b !important;
   color: white !important;
   width: max-content !important;
   display: flex !important;
-  font-weight: 600 !important;
   align-items: center !important;
   padding: 0px 20px !important;
   height: 50px !important;
@@ -11679,23 +11638,37 @@ aside,
   font-size: 16px !important;
   font-weight: bold !important;
   cursor: pointer !important;
-  animation-name: wave-animation !important;
-  animation-duration: 2.5s !important;
-  animation-iteration-count: infinite !important;
-  transform-origin: 70% 70% !important;
 }
+
 .templatecookie-btn .purchase-btn span svg {
   margin-left: 8px;
-  display: block;
   width: 20px;
   height: 18px;
 }
+
 .templatecookie-btn .purchase-btn span svg path {
   stroke: white;
 }
-.templatecookie-btn .purchase-btn:hover {
-  animation-name: unset !important;
+
+/* Perubahan saat tampilan di perangkat seluler */
+@media screen and (max-width: 600px) {
+  .templatecookie-btn {
+    bottom: 10px !important;
+    right: 10px !important;
+  }
+  
+  .templatecookie-btn .purchase-btn {
+    font-size: 14px !important;
+    padding: 0px 12px !important;
+    height: 40px !important;
+  }
+  
+  .templatecookie-btn .purchase-btn span svg {
+    width: 16px;
+    height: 14px;
+  }
 }
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0deg);
