@@ -9445,9 +9445,14 @@ aside,
   margin-bottom: 10px; /* Jarak bawah tanggal */
 }
 
+.project-wrapper-title {
+  text-align: left; /* Rata kiri teks */
+}
+
 .project-wrapper-title p {
   margin-bottom: 20px; /* Jarak bawah paragraf */
 }
+
 
 .project-wrapper-button {
   text-align: center; /* Posisi tengah tombol */
