@@ -9410,46 +9410,83 @@ aside,
 }
 
 .project {
-  padding-top: 140px;
+  padding-top: 60px; /* Ruang atas */
 }
 
 .project__container {
-  border-bottom: 1px solid #dddddd;
-  padding-bottom: 60px;
+  display: flex; /* Flexbox */
+  flex-direction: column; /* Tampilan vertikal */
+  align-items: center; /* Posisi tengah secara horizontal */
+  max-width: 1200px; /* Lebar maksimal kontainer */
+  margin: 0 auto; /* Posisi di tengah */
 }
 
 .project-wrapper {
-  margin-bottom: 70px;
-}
-
-.project-wrapper-image {
-  margin-left: -30px;
-  margin-bottom: -10px;
+  width: 100%; /* Lebar sesuai kontainer */
+  margin-bottom: 30px; /* Jarak antar item */
 }
 
 .project-wrapper-image img {
-  max-width: 100%;
+  width: 100%; /* Agar gambar mengisi lebar div */
+  height: auto; /* Tinggi otomatis */
+}
+
+.project-wrapper-title {
+  text-align: center; /* Posisi tengah teks */
+  margin-top: 20px; /* Jarak atas */
 }
 
 .project-wrapper-title h3 {
-  font-size: 30px;
-  line-height: 40px;
+  margin-bottom: 10px; /* Jarak bawah judul */
 }
 
 .project-wrapper-title span {
-  font-size: 16px;
-  font-family: "Gilroy-Medium";
-  line-height: 30px;
-  color: #ff465e;
-  padding: 5px 0;
-  display: block;
+  display: block; /* Pindahkan tanggal ke baris baru */
+  margin-bottom: 10px; /* Jarak bawah tanggal */
 }
 
 .project-wrapper-title p {
-  font-size: 18px;
-  line-height: 30px;
-  margin-top: 5px;
+  margin-bottom: 20px; /* Jarak bawah paragraf */
 }
+
+.project-wrapper-button {
+  text-align: center; /* Posisi tengah tombol */
+}
+
+.project-wrapper-button .primary__button {
+  padding: 15px 30px; /* Ukuran tombol */
+}
+
+/* Responsiveness for smaller devices */
+@media (max-width: 767px) {
+  .project {
+    padding-top: 30px; /* Mengurangi ruang atas */
+  }
+
+  .project__container {
+    align-items: stretch; /* Posisi item secara vertikal */
+  }
+
+  .project-wrapper {
+    width: 90%; /* Lebar maksimal pada layar kecil */
+  }
+}
+
+/* Responsiveness for larger devices */
+@media (min-width: 768px) {
+  .project-wrapper {
+    margin-bottom: 15px; /* Mengurangi jarak antar item */
+  }
+
+  .project-wrapper-title {
+    margin-top: 10px; /* Mengurangi jarak atas */
+  }
+
+  .project-wrapper-button {
+    margin-top: 10px; /* Mengurangi jarak atas */
+  }
+}
+
 
 .project-wrapper-button {
   margin-top: 20px;
@@ -9694,105 +9731,53 @@ aside,
   }
 }
 
+
+/* Responsiveness for small devices (max-width: 767px) */
 @media (max-width: 767px) {
-  .project {
-    padding-top: 60px;
+  .project-wrapper-image img {
+    max-width: 100%; /* Membuat gambar responsif */
+    height: auto; /* Menghindari distorsi gambar */
   }
+
   .project-wrapper-title h3 {
-    font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 0px;
+    font-size: 18px; /* Mengurangi ukuran font untuk judul */
+    line-height: 24px; /* Sesuaikan line-height */
   }
+
   .project-wrapper-title span {
-    line-height: 26px;
+    font-size: 12px; /* Mengurangi ukuran font untuk tanggal */
+    line-height: 16px; /* Sesuaikan line-height */
   }
+
   .project-wrapper-title p {
-    font-size: 14px;
-    line-height: 28px;
-  }
-  .project-wrapper-button {
-    margin-top: 15px;
-  }
-  .project-wrapper-button .primary__button {
-    padding: 15px 30px;
-  }
-  .project-detail .project-overview-wrapper {
-    margin-left: 0px;
-    margin-right: 0px;
+    font-size: 14px; /* Mengurangi ukuran font untuk teks */
+    line-height: 20px; /* Sesuaikan line-height */
   }
 }
 
-@media (max-width: 575px) {
-  .project-work-process {
-    margin: 0;
-    border-radius: 0px;
+/* Responsiveness for medium and large devices (min-width: 768px) */
+@media (min-width: 768px) {
+  .project-wrapper-image img {
+    max-width: 100%; /* Membuat gambar responsif */
+    height: auto; /* Menghindari distorsi gambar */
   }
-}
 
-@media (min-width: 320px) and (max-width: 574px) {
-  .project .load-more-button .primary__button {
-    padding: 15px 30px;
-  }
-  .project-detail {
-    padding-top: 60px;
-  }
-  .project-detail .project-detail-content h2 {
-    font-size: 24px;
-    line-height: 38px;
-    margin-bottom: 0px;
-  }
-  .project-detail .project-overview-wrapper {
-    margin-top: 0px;
-  }
-  .our-work-process .section-title h2 {
-    font-size: 26px;
-    line-height: 36px;
-  }
-  .our-work-process.project-detail {
-    padding: 60px 0px;
-    padding-bottom: 90px;
-    margin-top: 60px;
-  }
-  .our-work-process .shape {
-    display: none;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 419px) {
-  .project-wrapper-image {
-    margin-left: -15px;
-  }
   .project-wrapper-title h3 {
-    margin-top: 15px;
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 24px; /* Ukuran font kembali normal untuk judul */
+    line-height: 32px; /* Sesuaikan line-height */
   }
-  .project-detail .project-overview-wrapper .overview-detail {
-    padding: 30px 20px;
+
+  .project-wrapper-title span {
+    font-size: 14px; /* Ukuran font kembali normal untuk tanggal */
+    line-height: 20px; /* Sesuaikan line-height */
+  }
+
+  .project-wrapper-title p {
+    font-size: 16px; /* Ukuran font kembali normal untuk teks */
+    line-height: 24px; /* Sesuaikan line-height */
   }
 }
 
-/* Medium devices 768 - 991 */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* common area start */
-  .project-wrapper-image {
-    margin-left: -15px;
-  }
-  .project-work-process .shape .round-shape01 {
-    top: -5%;
-  }
-  .project-work-process .shape .round-shape02 {
-    top: -6%;
-  }
-}
-
-/* Small devices 420 - 574 */
-@media only screen and (min-width: 420px) and (max-width: 574px) {
-  /* common area start */
-  .project-wrapper-image {
-    margin-left: -20px;
-  }
-}
 
 .conatact-area {
   padding-top: 60px;
